@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f1e3a">
+<meta name="description" content="Ten ready-to-send email templates for the conversations most professionals are afraid to start with their CPA — a companion to The Quiet Fortune.">
+<title>What to Email Your CPA — A Companion to The Quiet Fortune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1e3a;
+    --navy-soft: #1c2d4f;
+    --navy-deeper: #091428;
+    --ivory: #f5efe2;
+    --ivory-warm: #ede5d1;
+    --cream: #faf6ea;
+    --gold: #c9a961;
+    --gold-soft: #e9d9a8;
+    --gold-pale: #f5ecd0;
+    --rust: #a8472a;
+    --rust-soft: #f0d9cf;
+    --sage: #4a6b5e;
+    --sage-soft: #dde6e0;
+    --rule: #d4c7a8;
+    --muted: #6e6450;
+    --ink: #1a1a1a;
+    --shadow-sm: 0 1px 2px rgba(15,30,58,0.04);
+    --shadow: 0 2px 4px rgba(15,30,58,0.04), 0 8px 24px rgba(15,30,58,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--ivory);
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(201,169,97,0.06) 0%, transparent 42%),
+      radial-gradient(circle at 88% 82%, rgba(15,30,58,0.04) 0%, transparent 40%);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    pointer-events: none; z-index: 1;
+    opacity: 0.32;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.22 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; color: var(--navy); }
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78em; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* Topbar */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245,239,226,0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .topbar-inner {
+    max-width: 1100px; margin: 0 auto;
+    padding: 16px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-mark {
+    width: 38px; height: 38px;
+    background: var(--navy); color: var(--cream);
+    display: grid; place-items: center;
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: 20px; border-radius: 2px; position: relative;
+  }
+  .brand-mark::after {
+    content: ''; position: absolute;
+    bottom: -3px; right: -3px;
+    width: 9px; height: 9px;
+    background: var(--gold); transform: rotate(45deg);
+  }
+  .brand-text { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 500; letter-spacing: 0.01em; }
+  .brand-text em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .topbar-meta { font-size: 12px; color: var(--muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; }
+
+  /* Hero */
+  .hero {
+    padding: 84px 28px 56px;
+    max-width: 920px; margin: 0 auto;
+    text-align: center; position: relative; z-index: 2;
+  }
+  .hero-eyebrow {
+    color: var(--gold); font-size: 11px;
+    letter-spacing: 0.32em; margin-bottom: 22px;
+    display: inline-flex; align-items: center; gap: 18px;
+    font-weight: 500;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 36px; height: 1px; background: var(--gold);
+  }
+  .hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 400;
+    margin-bottom: 24px;
+    line-height: 1.0;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(17px, 2.1vw, 21px);
+    color: var(--navy-soft);
+    max-width: 660px; margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Intro */
+  .intro {
+    max-width: 720px;
+    margin: 0 auto 60px;
+    padding: 0 28px;
+    position: relative; z-index: 2;
+  }
+  .intro p {
+    margin-bottom: 18px;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .intro p strong { color: var(--navy); font-weight: 600; }
+  .intro .how-to {
+    margin-top: 28px;
+    padding: 24px 28px;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+  }
+  .intro .how-to-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .intro .how-to ol {
+    padding-left: 22px;
+    color: var(--ink);
+    font-size: 14.5px;
+  }
+  .intro .how-to li { margin-bottom: 8px; padding-left: 4px; }
+  .intro .how-to li::marker { color: var(--gold); font-weight: 600; }
+
+  /* Email grid */
+  .emails {
+    max-width: 920px;
+    margin: 0 auto 80px;
+    padding: 0 28px;
+    position: relative; z-index: 2;
+  }
+
+  .email {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .email-header {
+    padding: 24px 30px 20px;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+  }
+  .email-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.22em;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .email-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--navy);
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .email-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .email-context {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.55;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+  .email-when {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 4px 10px;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
+  .email-body {
+    padding: 26px 30px;
+    position: relative;
+  }
+  .email-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--rule);
+    line-height: 1.7;
+  }
+  .email-meta-row { display: flex; gap: 8px; }
+  .email-meta-row span:first-child {
+    color: var(--navy);
+    font-weight: 600;
+    min-width: 60px;
+  }
+
+  .email-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.72;
+    color: var(--ink);
+    white-space: pre-wrap;
+  }
+  .email-text strong { color: var(--navy); font-weight: 600; }
+  .email-text em { font-style: italic; color: var(--navy-soft); }
+
+  .email-footer {
+    padding: 14px 30px 20px;
+    background: var(--ivory-warm);
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .email-tip {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+  }
+  .email-tip strong { color: var(--navy); font-style: normal; font-family: 'Inter', sans-serif; font-weight: 600; }
+  .copy-btn {
+    background: var(--navy);
+    color: var(--cream);
+    border: none;
+    padding: 9px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .copy-btn:hover {
+    background: var(--navy-deeper);
+    transform: translateY(-1px);
+  }
+  .copy-btn.copied {
+    background: var(--sage);
+  }
+  .copy-btn.copied::before { content: '✓ '; }
+
+  /* Closing letter */
+  .closing {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 56px 28px;
+    text-align: center;
+    position: relative; z-index: 2;
+  }
+  .closing-rule {
+    width: 56px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 28px;
+  }
+  .closing h2 {
+    font-size: 30px;
+    color: var(--navy);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .closing h2 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .closing p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--navy-soft);
+    font-style: italic;
+    max-width: 580px;
+    margin: 0 auto 16px;
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid var(--rule);
+    padding: 50px 28px 60px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12.5px;
+    position: relative; z-index: 2;
+  }
+  .footer-quote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--navy);
+    max-width: 520px;
+    margin: 0 auto 18px;
+    line-height: 1.45;
+  }
+  .footer .disclaimer {
+    max-width: 640px;
+    margin: 18px auto 0;
+    font-size: 11.5px;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  /* Mobile */
+  @media (max-width: 720px) {
+    .hero { padding: 56px 22px 36px; }
+    .intro, .emails, .closing { padding: 0 20px; }
+    .email-header, .email-body { padding: 20px 22px; }
+    .email-footer { padding: 14px 22px 18px; flex-direction: column; align-items: flex-start; }
+    .email-title { font-size: 21px; }
+    .topbar-inner { padding: 14px 20px; }
+    .brand-text { font-size: 16px; }
+    .topbar-meta { display: none; }
+  }
+
+  /* iOS fixes */
+  @supports (-webkit-touch-callout: none) {
+    body { font-size: 16px; }
+  }
+  @media (hover: none) and (pointer: coarse) {
+    .copy-btn { min-height: 44px; }
+  }
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media print {
+    body { background: white; }
+    .topbar, .copy-btn, .email-footer { display: none; }
+    body::before { display: none; }
+    .email { box-shadow: none; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">Q</div>
+      <div class="brand-text">What to Email Your <em>CPA</em></div>
+    </div>
+    <div class="topbar-meta">A COMPANION · 10 TEMPLATES</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">A COMPANION TO THE QUIET FORTUNE</div>
+  <h1>What to Email<br>Your <em>CPA</em></h1>
+  <p class="hero-sub">Ten ready-to-send templates for the conversations most professionals are quietly afraid to start. Adapt, fill in the blanks, copy, send.</p>
+</section>
+
+<section class="intro">
+  <p>Here is something almost no one talks about: <strong>most people are afraid of their CPA</strong>. Not afraid in any dramatic sense — afraid in the small, embarrassed way that keeps them from sending a two-paragraph email that could save them five figures. They worry the question is too basic. They worry they'll be charged for the email. They worry their CPA will think they're trying to do the CPA's job. So the email never gets sent. And the optimization never happens.</p>
+
+  <p>This guide is the solution to that quiet problem. Ten emails, written in the exact tone a busy professional would use when speaking with a competent advisor. Each one identifies a strategy that's worth real money, frames the request precisely, and gives your CPA enough context to respond efficiently. <strong>Most are under 150 words.</strong> Most can be sent before you finish your morning coffee.</p>
+
+  <p>A good CPA will appreciate these emails. They show that you've done your homework, that you respect their time, and that you understand what you're asking for. A great CPA will say "yes, let's discuss." A mediocre one will say "I don't really do that kind of planning." That answer is itself useful — it tells you it might be time to find a new CPA.</p>
+
+  <div class="how-to">
+    <div class="how-to-title">HOW TO USE THIS GUIDE</div>
+    <ol>
+      <li>Read each email's context to confirm it applies to your situation.</li>
+      <li>Click <strong>Copy</strong> on the email body, then paste it into your email client.</li>
+      <li>Fill in the <em>[bracketed sections]</em> with your specific details.</li>
+      <li>Read it once for tone — adjust to sound like you, not like a template.</li>
+      <li>Send. Most CPAs reply within 2-3 business days.</li>
+    </ol>
+  </div>
+</section>
+
+<main class="emails">
+
+  <!-- EMAIL 01 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 01</div>
+      <h2 class="email-title">Setting Up a <em>Tax Planning Conversation</em></h2>
+      <p class="email-context">The most important email of all. Most CPAs default to "preparation" mode — taking your documents in March and filing your return in April. This email reframes the relationship as proactive planning, which is where the real money is saved.</p>
+      <span class="email-when">SEND IN OCTOBER OR NOVEMBER</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Year-end tax planning — request for a 30-minute call</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'd like to set up a brief planning conversation before year-end — separate from filing season. My goal is to make sure I'm not missing any tax-saving moves that need to happen before December 31.
+
+A few specific things I'd like to cover:
+
+• Whether my current 401(k) and IRA contributions are optimized for my situation
+• Any potential Roth conversion opportunities given my current bracket
+• Tax-loss harvesting in my brokerage account before year-end
+• Whether anything has changed in my withholding that I should adjust
+
+A 30-minute call sometime in the next few weeks would be ideal. Please let me know your availability and your fee for planning consultations — I understand this is different from return preparation.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> It signals you understand planning is paid work, separate from filing. It gives them a concrete agenda. A good CPA loves this email; a mediocre one will say "let's just talk in March" — which is itself diagnostic information.</div>
+      <button class="copy-btn" data-target="0">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 02 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 02</div>
+      <h2 class="email-title">Backdoor Roth — <em>Pro-Rata Check</em></h2>
+      <p class="email-context">The single most expensive Backdoor Roth mistake is the pro-rata rule. If you have any pretax IRA balances, the IRS treats your conversion as proportionally pretax, generating a surprise tax bill. This email surfaces the issue before you make the contribution.</p>
+      <span class="email-when">SEND IN EARLY JANUARY</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Backdoor Roth — pro-rata rule check before I contribute</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'm planning to do a Backdoor Roth IRA contribution this year — non-deductible Traditional IRA contribution followed by conversion to Roth.
+
+Before I proceed, I want to make sure I won't trigger the pro-rata rule. To my knowledge, I have the following IRA balances as of January 1:
+
+• Traditional IRA: $[amount, or "$0"]
+• SEP IRA: $[amount, or "$0"]
+• SIMPLE IRA: $[amount, or "$0"]
+• Rollover IRA: $[amount, or "$0"]
+
+Could you confirm whether this triggers the pro-rata rule? If yes, can we discuss whether rolling any balances back into my current 401(k) is an option?
+
+Once we've confirmed it's clean, I'll plan to contribute and convert within the same week. I'll need help filing Form 8606 with my return next year.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You're showing you understand the trap. You're asking a yes/no question that they can answer in 10 minutes. You're flagging Form 8606, which is the second-most-common mistake.</div>
+      <button class="copy-btn" data-target="1">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 03 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 03</div>
+      <h2 class="email-title">Roth Conversion — <em>Sizing the Right Amount</em></h2>
+      <p class="email-context">A Roth conversion takes money from a Traditional IRA, pays tax on it now, and puts it in a Roth IRA — where it grows tax-free forever. The art is converting the right amount: enough to fill up your current bracket without spilling into the next one.</p>
+      <span class="email-when">SEND IN OCTOBER OR NOVEMBER</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Roth conversion strategy for this tax year</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'd like to explore a Roth conversion this year. My situation:
+
+• Current Traditional IRA balance: $[amount]
+• Estimated taxable income this year: $[amount]
+• I'm currently in the [bracket]% bracket and expect to stay there or move higher in retirement.
+
+A few questions I'd appreciate your input on:
+
+1. How much can I convert this year before pushing into the next bracket?
+2. Does it make sense to convert that full amount, or should we leave some headroom?
+3. Are there any IRMAA (Medicare premium) implications I should factor in?
+4. Any state tax considerations specific to [state]?
+
+If you're available, a brief call to model the right conversion size would be great. Otherwise, your written recommendation works.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've named the right concept ("bracket-filling"), surfaced IRMAA (a detail most clients don't know), and given them the data points they need to model it.</div>
+      <button class="copy-btn" data-target="2">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 04 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 04</div>
+      <h2 class="email-title">Mega Backdoor Roth — <em>Plan Review</em></h2>
+      <p class="email-context">The Mega Backdoor Roth can move tens of thousands of additional dollars into Roth annually — but only if your 401(k) plan permits after-tax contributions and in-plan conversions. This email asks your CPA to review your plan documents and confirm.</p>
+      <span class="email-when">SEND ONCE PER YEAR (Q1)</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Mega Backdoor Roth — confirming my 401(k) plan supports it</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'm trying to determine whether my employer's 401(k) plan supports the Mega Backdoor Roth strategy. I've attached the Summary Plan Description.
+
+The two specific features I'm looking for:
+
+1. Whether the plan allows <strong>after-tax (non-Roth) contributions</strong> beyond the standard employee deferral limit
+2. Whether the plan allows <strong>in-plan Roth conversions</strong> or <strong>in-service withdrawals</strong>
+
+If both are permitted, I'd like to start contributing the maximum after-tax amount and converting it to Roth immediately.
+
+For context: I'm already maxing the regular employee 401(k) contribution and my employer's match. I want to use any remaining room under the total cap for Roth.
+
+If you'd prefer, I can also call my benefits administrator directly with these questions — but I wanted to start with you since you have the broader picture.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've named the two specific plan features that matter — most CPAs and HR reps need to hear these exact terms ("after-tax contributions," "in-plan conversion") to give a useful answer. You're not asking them to research the strategy, just to verify it.</div>
+      <button class="copy-btn" data-target="3">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 05 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 05</div>
+      <h2 class="email-title">Tax-Loss Harvesting — <em>Year-End Review</em></h2>
+      <p class="email-context">If you have a taxable brokerage account and any losing positions, December is the time to sell them — realizing the loss to offset gains or reduce ordinary income by up to $3,000. The wash-sale rule is the trap; this email asks your CPA to help you avoid it.</p>
+      <span class="email-when">SEND IN EARLY DECEMBER</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Year-end tax-loss harvesting — request for review</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'd like to do some tax-loss harvesting in my brokerage account before December 31. Before I trade, I want to make sure I do it correctly.
+
+My realized capital gains so far this year are approximately $[amount]. I have unrealized losses of roughly $[amount] across positions in [list 1-3 examples — e.g., "VTI, an emerging markets ETF, and an individual stock"].
+
+A few things I'd like your input on:
+
+1. How much in losses should I harvest to optimize this year vs. carrying losses forward?
+2. What replacement positions would not trigger the wash-sale rule? (For example, if I sell VTI, can I buy ITOT or VOO?)
+3. Anything I should be aware of with the 30-day window across all my accounts, including IRAs?
+
+If easier, I can send a list of specific positions I'm considering and you can flag any concerns.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've named the wash-sale rule and the 30-day window — including the critical detail that wash-sale applies across all your accounts (including IRAs), which most amateurs miss. Your CPA will know exactly what to check.</div>
+      <button class="copy-btn" data-target="4">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 06 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 06</div>
+      <h2 class="email-title">HSA Strategy — <em>Treating It as Retirement</em></h2>
+      <p class="email-context">Most people use their HSA as a checking account for medical bills. The wealthy use it as a stealth retirement account — investing the balance and saving receipts to reimburse decades later. This email confirms your CPA is on board with the strategy.</p>
+      <span class="email-when">SEND ANYTIME (FIRST YEAR ELIGIBLE)</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>HSA — using it as a long-term retirement vehicle</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'm planning to treat my HSA as a long-term investment vehicle rather than a current-expense account. The strategy:
+
+1. Max the HSA every year I'm eligible
+2. Invest the balance in low-cost index funds
+3. Pay current medical expenses out of pocket from my checking account
+4. Save every medical receipt to reimburse myself tax-free in retirement (or later)
+
+A few questions:
+
+1. Anything specific to [my state] I should know? I know California and New Jersey don't conform — does [my state] follow federal HSA treatment?
+2. What documentation should I keep for each medical expense to support a future reimbursement?
+3. Are there any reporting requirements during the years I'm not withdrawing?
+
+I want to make sure I'm building a clean paper trail so this strategy works decades from now.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've correctly identified the two state outliers (CA and NJ), and you're asking the right operational question — "what documentation do I need now to support a withdrawal in 30 years?" Most CPAs love this kind of forward-thinking client.</div>
+      <button class="copy-btn" data-target="5">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 07 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 07</div>
+      <h2 class="email-title">Estimated Quarterly Payments — <em>Calibration</em></h2>
+      <p class="email-context">If you have meaningful self-employment income, RSU vesting, or large investment gains, you may need to make quarterly estimated payments to avoid IRS underpayment penalties. This email asks your CPA to calculate the right amount.</p>
+      <span class="email-when">SEND EACH QUARTER (JAN, APR, JUN, SEP)</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Q[1-4] estimated tax payment — calibration</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I'd like your help calibrating my Q[1-4] estimated tax payment. My situation this year so far:
+
+• W-2 income: $[amount] year-to-date
+• 1099 / self-employment income: $[amount] year-to-date
+• Capital gains realized: $[amount]
+• Other taxable income (dividends, interest, etc.): $[amount]
+• Federal tax withheld from W-2 to date: $[amount]
+• Estimated payments already made this year: $[amount]
+
+I'd like to make sure I'm meeting the safe harbor — either 100% of last year's total tax (110% if AGI over $150K) or 90% of this year's projected.
+
+Could you let me know what to send this quarter, and the exact deadline? I'd rather slightly overpay than face an underpayment penalty.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've named the safe harbor rule including the 110% trigger for high earners — a detail most clients don't know. You've also given them all the data they need to calculate the right number in 5 minutes.</div>
+      <button class="copy-btn" data-target="6">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 08 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 08</div>
+      <h2 class="email-title">Major Life Event — <em>Tax Implications Check</em></h2>
+      <p class="email-context">Marriage, divorce, having a child, buying a house, getting an inheritance, starting a side business — each of these has tax consequences that compound if missed. This is the email to send within two weeks of any major change.</p>
+      <span class="email-when">SEND WITHIN 2 WEEKS OF THE EVENT</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Major life change — tax implications I should know about</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I wanted to flag a recent change in my situation that I expect has tax implications:
+
+[Describe the event in 1-2 sentences — e.g., "My wife and I got married in June" / "I started a consulting business on the side this month" / "My father passed away and I'm inheriting approximately $[amount] in [account type]" / "I purchased a rental property in October"]
+
+A few things I'd like to think through:
+
+1. What changes immediately for my tax situation this year?
+2. Are there any one-time elections or filings I need to make in the next 30-60 days?
+3. Does my withholding or estimated payment plan need to be adjusted?
+4. Should we set up a longer planning conversation before year-end?
+
+I want to make sure I'm not missing anything time-sensitive. Please let me know if a call is the better format.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> Life events are when the most tax mistakes happen — usually because people don't think to ask. This email shows you understand that, and asks the right "next 30-60 days" question that catches time-sensitive elections (like inherited IRA stretch decisions, partnership elections, etc.).</div>
+      <button class="copy-btn" data-target="7">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 09 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 09</div>
+      <h2 class="email-title">Equity Compensation — <em>RSU/ISO Strategy</em></h2>
+      <p class="email-context">If your compensation includes RSUs, ISOs, NSOs, or ESPP, the tax math is genuinely complex. Most people pay more tax than they need to by selling at the wrong times or missing AMT implications on ISOs. This email opens the conversation.</p>
+      <span class="email-when">SEND EARLY IN A NEW JOB OR Q1 ANNUALLY</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Equity compensation strategy — annual planning</span></div>
+      </div>
+      <div class="email-text">Hi [CPA's name],
+
+I have meaningful equity compensation this year and want to make sure I'm handling it tax-efficiently. The relevant details:
+
+• RSUs vesting this year: approximately $[amount] gross
+• Default withholding on RSU vests: [22% or 37%, check your paystub]
+• ISOs/NSOs: [if applicable, with strike price and current FMV]
+• ESPP: [if applicable, with discount % and offering period]
+
+A few questions:
+
+1. Is my default withholding sufficient given my total income, or should I increase it / make estimated payments?
+2. For any unexercised ISOs, what's my AMT exposure if I exercise this year?
+3. For RSUs that vest, when does it make sense to sell vs. hold? (Tax-wise — I understand the diversification argument separately.)
+4. Anything specific to year-end planning around these positions?
+
+If you'd like, I can send my offer letter and most recent vesting statement.
+
+Thanks,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You've named the 22% RSU under-withholding trap — that's the single most common surprise tax bill for tech workers. You've also surfaced AMT for ISOs, which is the most expensive equity comp mistake.</div>
+      <button class="copy-btn" data-target="8">Copy</button>
+    </div>
+  </article>
+
+  <!-- EMAIL 10 -->
+  <article class="email">
+    <div class="email-header">
+      <div class="email-num">EMAIL 10</div>
+      <h2 class="email-title">Considering a New CPA — <em>The Fit Conversation</em></h2>
+      <p class="email-context">Sometimes the conclusion of all these emails is that your current CPA is a preparer, not a planner — and you need someone different. This is the email to send to a prospective new CPA, before you switch.</p>
+      <span class="email-when">SEND WHEN INTERVIEWING NEW CPAS</span>
+    </div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="email-meta-row"><span>Subject:</span><span>Looking for a new CPA — checking fit</span></div>
+      </div>
+      <div class="email-text">Hi [Prospective CPA's name],
+
+I'm a [profession / brief description], filing in [state]. I'm considering switching CPAs and would like to understand whether your practice is a good fit for my situation.
+
+A bit about my situation:
+
+• [W-2 income / 1099 self-employment / rental properties / equity comp / etc. — pick the 2-3 most relevant]
+• Approximate AGI: $[amount]
+• Current accounts I manage: [401(k), Roth IRA, HSA, taxable brokerage, etc.]
+• Strategies I currently use or want to explore: [e.g., Backdoor Roth, Mega Backdoor, tax-loss harvesting, Roth conversions, etc.]
+
+A few questions for you:
+
+1. Do you offer year-round planning, or primarily tax preparation?
+2. What's your fee structure? (Hourly, flat-fee per return, retainer?)
+3. How do you typically handle [the specific strategy or situation most relevant to you]?
+4. How responsive are you between filing seasons — typical turnaround on questions during the year?
+5. Are you taking new clients for the upcoming tax year?
+
+If you have a brief introductory call available, I'd appreciate the opportunity to discuss. Thanks for your time.
+
+Best,
+[Your name]</div>
+    </div>
+    <div class="email-footer">
+      <div class="email-tip"><strong>Why this works:</strong> You're presenting yourself as a serious, organized client — exactly the kind a planning-oriented CPA wants. You've front-loaded the most relevant details so they can quickly decide if it's a fit. And questions 1 and 4 are diagnostic: a preparation-only firm will hedge on both.</div>
+      <button class="copy-btn" data-target="9">Copy</button>
+    </div>
+  </article>
+
+</main>
+
+<section class="closing">
+  <div class="closing-rule"></div>
+  <h2>A final <em>note</em></h2>
+  <p>Of these ten emails, send at least one this year. Not all ten — one is enough to begin. The right CPA-client relationship is built one good email at a time, over years. The people who get the most out of their CPAs are the ones who ask the most thoughtful questions — not the ones who pay the most.</p>
+  <p>You now have ten thoughtful questions. Use them well.</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-quote">
+    A good CPA is one of the most underrated relationships in financial life. Cultivate it deliberately.
+  </div>
+  <div>What to Email Your CPA · A Companion to The Quiet Fortune · 2026 Edition</div>
+  <div class="disclaimer">
+    These templates are educational and illustrative. They reflect general U.S. tax practices as of early 2026. Your specific situation may require different framing. These are not legal or financial advice. Adapt each template to your circumstances before sending, and rely on the response of your licensed CPA or fiduciary advisor for decisions affecting significant money.
+  </div>
+</footer>
+
+<script>
+  // Copy-to-clipboard for each email
+  const emailTexts = Array.from(document.querySelectorAll('.email-text')).map(el => el.textContent);
+
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const idx = parseInt(btn.dataset.target);
+      const text = emailTexts[idx];
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.classList.add('copied');
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = original;
+        }, 2000);
+      } catch (err) {
+        // Fallback for older browsers / file:// origin
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          btn.classList.add('copied');
+          btn.textContent = 'Copied';
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.textContent = 'Copy';
+          }, 2000);
+        } catch (e) {
+          alert('Could not copy. Please select the text manually.');
+        }
+        document.body.removeChild(textarea);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
